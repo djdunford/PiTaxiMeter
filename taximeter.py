@@ -44,5 +44,5 @@ while True:
     flp.scroll_print("UBER DAVE FOR HIRE", 0.2)
 
     if trigger == 1:
-        fourlettetphat.clear()
+        flp.clear()
         flp.scroll_print("HIRED",0.2)
