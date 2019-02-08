@@ -45,7 +45,7 @@ while True:
 
     if trigger == 1:
         flp.clear()
-        flp.set_blink(HT16K33_BLINK_2HZ)
+        flp.set_blink(flp.HT16K33_BLINK_2HZ)
         flp.print_str("HIRE")
         time.sleep(5)
-        flp.set_blink(HT16K33_BLINK_OFF)
+        flp.set_blink(flp.HT16K33_BLINK_OFF)
