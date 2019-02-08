@@ -49,3 +49,9 @@ while True:
         flp.print_str("HIRE")
         time.sleep(5)
         flp.set_blink(flp.HT16K33_BLINK_OFF)
+        trigger = 0
+        
+        price = 0
+        pricetime = time.time()
+        while trigger != 1:
+            
