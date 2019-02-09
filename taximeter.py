@@ -3,6 +3,7 @@
 import fourletterphat as flp
 import time
 import RPi.GPIO as GPIO
+import random
 
 # clear trigger
 trigger = 0
@@ -51,7 +52,22 @@ while True:
         flp.set_blink(flp.HT16K33_BLINK_OFF)
         trigger = 0
         
-        price = 0
+        price = 300
         pricetime = time.time()
+        interval = random.randint(10,30)
         while trigger != 1:
+        
+            # print amount
+            flp.clear()
+            flp.print_number_str(price)
+            flp.show()
+            
+            # randomly between 10 and 30 secs increment by 20p
+            if time.time() > pricetime + interval:
+                price += 20
+                interval = random.randint(10,30)
+                
+    for i in range(3):
+        flp.clear()
+        flp.scroll_print("PAY NOW", 0.2)
             
