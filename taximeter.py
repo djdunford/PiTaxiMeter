@@ -85,9 +85,24 @@ while True:
                 oldprice = price
                 interval = random.randint(5,20)
                 pricetime = time.time()
-                
-        for i in range(3):
-            flp.clear()
-            flp.scroll_print("PAY NOW", 0.2)
         
+        decimalprice = price / 100.0        
+        trigger = 0
+        
+        while trigger == 0:
+            flp.clear()
+            flp.print_str("PAY ")
+            flp.show()
+            time.sleep(0.5)
+            flp.clear()
+            flp.print_str(" NOW")
+            flp.show()
+            time.sleep(0.5)
+            flp.clear()
+            flp.print_number_str(decimalprice)
+            time.sleep(1)
+        
+        flp.scroll_print("THANK YOU - PLEASE RIDE AGAIN")
+        time.sleep(1)
+            
         trigger = 0
