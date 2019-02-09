@@ -69,6 +69,11 @@ while True:
             flp.clear()
             flp.print_number_str(price)
             flp.show()
+            if (int(time.time()*4) % 2) == 1:
+                flp.set_decimal(1,True)
+            else:
+                flp.set_decimal(1,False)
+            flp.show()
             
             # randomly between 10 and 30 secs increment by 20p
             if time.time() > pricetime + interval and price < 9980:
