@@ -89,4 +89,5 @@ while True:
         for i in range(3):
             flp.clear()
             flp.scroll_print("PAY NOW", 0.2)
-            
+        
+        trigger = 0
