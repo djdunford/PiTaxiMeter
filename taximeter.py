@@ -103,10 +103,10 @@ while True:
             flp.clear()
             flp.set_blink(flp.HT16K33_BLINK_2HZ)
             flp.print_number_str(price)
-            flp.show()
-            time.sleep(10)
-            flp.set_blink(flp.HT16K33_BLINK_OFF)
             flp.set_decimal(1,True)
+            flp.show()
+            time.sleep(6)
+            flp.set_blink(flp.HT16K33_BLINK_OFF)
             flp.show()
             time.sleep(1.5)
         
