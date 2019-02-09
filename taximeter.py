@@ -106,7 +106,7 @@ while True:
             flp.show()
             time.sleep(1.5)
         
-        flp.scroll_print("THANK YOU - PLEASE RIDE AGAIN",0.2)
+        flp.scroll_print("THANK YOU - PLEASE RIDE AGAIN",0.1)
         time.sleep(1)
         flp.clear()
         flp.show()
