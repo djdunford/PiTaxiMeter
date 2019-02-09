@@ -83,7 +83,7 @@ while True:
                     flp.print_number_str(i)
                     flp.show()
                 oldprice = price
-                interval = random.randint(10,30)
+                interval = random.randint(5,20)
                 pricetime = time.time()
                 
         for i in range(3):
