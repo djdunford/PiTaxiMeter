@@ -89,7 +89,6 @@ while True:
                 interval = random.randint(5,20)
                 pricetime = time.time()
         
-        decimalprice = price / 100.0        
         trigger = 0
         
         while trigger == 0:
@@ -102,7 +101,8 @@ while True:
             flp.show()
             time.sleep(0.5)
             flp.clear()
-            flp.print_number_str(decimalprice)
+            flp.print_number_str(price)
+            flp.set_decimal(1,True)
             flp.show()
             time.sleep(1.5)
         
@@ -113,3 +113,7 @@ while True:
         time.sleep(3)
             
         trigger = 0
+        
+    flp.clear()
+    flp.show()
+    time.sleep(0.5)
