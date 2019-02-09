@@ -46,6 +46,8 @@ while True:
 
     if trigger == 1:
         flp.clear()
+        flp.show()
+        time.sleep(2)
         flp.set_blink(flp.HT16K33_BLINK_2HZ)
         flp.print_str("HIRE")
         time.sleep(5)
@@ -100,9 +102,13 @@ while True:
             time.sleep(0.5)
             flp.clear()
             flp.print_number_str(decimalprice)
-            time.sleep(1)
+            flp.show()
+            time.sleep(1.5)
         
-        flp.scroll_print("THANK YOU - PLEASE RIDE AGAIN")
+        flp.scroll_print("THANK YOU - PLEASE RIDE AGAIN",0.2)
         time.sleep(1)
+        flp.clear()
+        flp.show()
+        time.sleep(3)
             
         trigger = 0
