@@ -63,11 +63,12 @@ while True:
             flp.show()
             
             # randomly between 10 and 30 secs increment by 20p
-            if time.time() > pricetime + interval:
+            if time.time() > pricetime + interval and price < 9980:
                 price += 20
                 interval = random.randint(10,30)
+                pricetime = time.time()
                 
-    for i in range(3):
-        flp.clear()
-        flp.scroll_print("PAY NOW", 0.2)
+        for i in range(3):
+            flp.clear()
+            flp.scroll_print("PAY NOW", 0.2)
             
