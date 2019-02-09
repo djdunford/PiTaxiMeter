@@ -52,7 +52,15 @@ while True:
         flp.set_blink(flp.HT16K33_BLINK_OFF)
         trigger = 0
         
+        oldprice = 0
         price = 300
+        
+        for i in range(oldprice,price):
+            flp.clear()
+            flp.print_number_str(i)
+            flp.show()
+        oldprice = price
+            
         pricetime = time.time()
         interval = random.randint(10,30)
         while trigger != 1:
@@ -65,6 +73,11 @@ while True:
             # randomly between 10 and 30 secs increment by 20p
             if time.time() > pricetime + interval and price < 9980:
                 price += 20
+                for i in range(oldprice,price):
+                    flp.clear()
+                    flp.print_number_str(i)
+                    flp.show()
+                oldprice = price
                 interval = random.randint(10,30)
                 pricetime = time.time()
                 
