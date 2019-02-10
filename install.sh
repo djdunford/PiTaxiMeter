@@ -22,7 +22,7 @@ mkdir -p $appdir
 chgrp -R pi $appdir
 
 # copy webapp and wsgi files
-cp pitaximeter.py $appdir
+cp taximeter.py $appdir
 
 # install service file
 cp pitaximeter.service /lib/systemd/system
