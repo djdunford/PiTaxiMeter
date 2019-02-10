@@ -1,0 +1,12 @@
+[Unit]
+Description=Pi Taxi Meter
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python3 /opt/pitaximeter/pitaximeter.py
+Restart=on-failure
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target
